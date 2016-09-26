@@ -36,7 +36,7 @@ try:
         .setAppName("My app")
         .set("spark.executor.memory", "1g"))
     sc = SparkContext(conf = conf)
-    ip = sc.parallelize(xrange(1,255))
+    ip = sc.parallelize(xrange(1,1000000))
 
     #target_number : 166
     mapRdd = ip.map(lambda x:myFunc(x,166))
